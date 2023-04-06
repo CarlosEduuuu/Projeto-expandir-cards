@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+body{
+  font-family: 'Delicious Handrawn', cursive;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+body h1{
+    color: black;
+    font-size: 54px;
+}
+.container{
+    
+    display: flex;
+    width: 90vw;
+}
+
+.painel:nth-child(1){
+    background-image: url(../imagens/slide1.jpg);
+}
+.painel:nth-child(2){
+    background-image: url(../imagens/slide2.jpg);
+}
+.painel:nth-child(3){
+    background-image: url(../imagens/slide3.jpg);
+}
+.painel:nth-child(4){
+    background-image: url(../imagens/slide4.jpg);
+}
+.painel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: gold;
+    cursor: pointer;
+    flex-grow:0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in-out;
+}
+
+.painel h3{
+    font-size: 54px;
+    position: absolute;
+    bottom: 20px;
+    margin: 10px;
+    opacity: 0;
+}
+.painel.ativo{
+    flex: 5;
+
+}
+.painel.ativo h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    
+}
+@media (max-width:480){
+    .container{
+        width: 100vw;
+    }
+    .painel:nth-of-type(4),
+    .painel:nth-of-type(5){
+        display: none;
+    }
+}
